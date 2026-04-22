@@ -1,0 +1,36 @@
+/* html, body {
+    margin: 0;
+    padding: 0;
+} */
+
+.footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    
+    /* used to ensure there's no gap above the footer */
+    margin-top: auto;
+
+    /* padding-bottom: calc(20px + env(safe-area-inset-bottom)); */
+    /* line-height: 30px; */
+    /* height: 10vh; */
+    /* outline: 3px solid green; */
+}
+
+/* .footer {
+  background: red;
+} 
+
+body {
+  background: yellow;
+} */
+
+/* used to make sure there's no margin at the bottom of the footer */
+.footer p {
+  margin: 0;
+}
+
+.social-media {
+    margin-top: 10px;
+}
