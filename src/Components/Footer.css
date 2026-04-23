@@ -4,11 +4,11 @@
 } */
 
 .footer {
-    background-color: #333;
-    color: #fff;
+    background-color: #ffaccf;
+    color: #000000;
     text-align: center;
     padding: 20px;
-    
+
     /* used to ensure there's no gap above the footer */
     margin-top: auto;
 

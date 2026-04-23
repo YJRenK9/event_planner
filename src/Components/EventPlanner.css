@@ -12,7 +12,7 @@ body {
     margin: 0;
     padding: 0;
     /* workaround for "removing" the bottom gap of the footer */
-    background-color: #333;
+    background-color: #ffaccf;
 }
 
 .page {
@@ -40,9 +40,9 @@ body {
     padding: 20px;
     text-align: center;
     background-color: white;
-    background-image: linear-gradient(135deg, #fee6f0 25%, transparent 25%),
+    background-image: linear-gradient(135deg, #ffaccf 25%, transparent 25%),
                 linear-gradient(225deg, #fee6f0 25%, transparent 25%),
-                linear-gradient(315deg, #fee6f0 25%, transparent 25%),
+                linear-gradient(315deg, #ffaccf 25%, transparent 25%),
                 linear-gradient(45deg, #fee6f0 25%, transparent 25%);
     background-position: -50px 0, -50px 0, 0 0, 0 0;
     background-size: 100px 100px; /* Adjust the size based on the pattern */
@@ -60,7 +60,7 @@ body {
   }
   
   .get-started-button {
-    background-color: #f85199;
+    background-color: #ff006a;
     color: #fff;
     border: none;
     border-radius: 5px;
@@ -71,13 +71,21 @@ body {
   }
   
   .get-started-button:hover {
-    background-color: #d32b74;
+    background-color: #D10056;
   }
   
   .features,
   .testimonials,
   .contact,.event-categories {
     margin-top: 50px;
+  }
+
+  .features,
+  .testimonials,
+  .contact {
+    /* margin-top: 50px; */
+    max-width: 720px;
+    margin-inline: auto;
   }
   
   .features h2,
@@ -87,8 +95,19 @@ body {
     margin-bottom: 20px;
   }
   
+  .features h2 {
+    background-color: #ff3388;
+    color: white;
+    /* display: inline-block; */
+    padding: 5px 10px;
+    margin: 0;
+    border-radius: 5px 5px 0 0;
+  }
+
   .features ul {
     list-style-type: none;
+    background-color: rgba(0,0,0,0.2);
+    border-radius: 0 0 5px 5px;
     padding: 0;
   }
   
@@ -96,9 +115,17 @@ body {
     font-size: 1.1rem;
     margin-bottom: 10px;
   }
+
   
   .testimonial {
     margin-bottom: 20px;
+    background-color: rgba(0,0,0,0.2);
+    border-radius: 5px;
+    padding: 15px;
+    /* margin: 15px; */
+    /* THIS is your spacing control */
+    width: 100%;
+    max-width: none;
   }
   
   .testimonial p {
@@ -107,6 +134,20 @@ body {
   
   .testimonial .author {
     font-weight: bold;
+  }
+
+  .contact h2, .testimonials h2 {
+    background-color: #ff3388;
+    color: white;
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 5px;
+  }
+
+  .contact {
+    background-color: rgba(255, 0, 81, 0.2);
+    padding: 20px;
+    border-radius: 5px;
   }
   
   .contact form {
@@ -133,7 +174,7 @@ body {
   }
   
   .submit-button {
-    background-color: #f85199;
+    background-color: #ff006a;
     color: #fff;
     border: none;
     border-radius: 5px;
@@ -144,7 +185,7 @@ body {
   }
   
   .submit-button:hover {
-    background-color: #d32b74;
+    background-color: #D10056;
   }
   
   footer {
@@ -166,9 +207,10 @@ body {
     width: 100%; /* important for responsive design */
     border-radius: 5px;
     padding: 0;
+    height: 100%; /* ensures the ul takes the full height of its container, allowing the background to cover the entire area */
 }
   .event-categories ul h2 {
-    background-color: #e46a9d;
+    background-color: #ff3388;
     text-align: center;
     padding: 5px 10px;
     color: white;
@@ -181,3 +223,41 @@ body {
     line-height: 24px;
     padding: 5px 10px;
   }
+
+.toast-container {
+  position: fixed;  /* Make the container fixed on the screen */
+  top: 0;           /* Position it at the top */
+  left: 50%;         /* Move it horizontally to the center */
+  transform: translateX(-50%); /* Offset it by 50% of its width to center it */
+  z-index: 9999;     /* Ensure it's above other elements */
+}
+
+.error-message {
+  background-color: #ff3388;
+  color: white;
+  border-radius: 0.33rem 0.33rem 0 0;
+  border: none;
+}
+
+.error-message-bottom {
+  background-color: #ff3c8d;
+  color: white;
+  border-radius: 0 0 0.33rem 0.33rem;
+  border: none;
+}
+
+.error-button {
+  background-color: #90003c;
+  border-color: #90003c;
+}
+
+.error-button:hover {
+  background-color: #D10056;
+  border-color: #D10056;
+}
+
+.error-button:active, .error-button:focus {
+  /* used !important to override the default button styles without modifying the original */
+  background-color: #D10056 !important;
+  border-color: #D10056 !important;
+}
